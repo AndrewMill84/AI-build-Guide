@@ -1,0 +1,16 @@
+# Ignore local projects built using the OS
+projects/
+# (But keep the example project)
+!examples/
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Node
+node_modules/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
