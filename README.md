@@ -6,7 +6,9 @@ A repo-native, agent-compatible operating model for building software from idea 
 
 ## What This Is
 
-The AI Build OS is a repeatable process framework stored as files in your repository. It defines **how** you build software — whether you're working alone, with an AI coding agent, or both.
+The AI Build OS is a markdown-based workflow system used to manage software projects across multiple stages, helping both humans and AI agents understand the current state, next action, and required project artifacts.
+
+It is not an app, a coding framework, or a traditional operating system. It is the structured process, templates, rules, and tracking method you use to move a software project from idea to implementation in a repeatable way.
 
 It gives you:
 
@@ -17,6 +19,8 @@ It gives you:
 - A **next-action tracker** (STATUS.md) so both you and your agent always know what to do next
 
 This is not an app. It is the system you use to build apps.
+
+For a quick-start checklist, see [`project-starter/new-project-checklist.md`](project-starter/new-project-checklist.md).
 
 ---
 
@@ -116,11 +120,14 @@ Full starter guide: [`project-starter/README.md`](project-starter/README.md)
 ai-build-os/
 ├── README.md               ← You are here
 ├── AGENTS.md               ← Rules for AI coding agents
+├── QUICKREF.md             ← Operator quick reference (stage-by-stage)
+├── CHANGELOG.md            ← System evolution log
 ├── workflow/               ← Stage definitions (the process)
 ├── templates/              ← Fill-in templates (the artifacts)
 ├── memory/                 ← Decisions, patterns, project index
 ├── diagrams/               ← Mermaid diagrams of the system
 ├── project-starter/        ← Tools for starting a new project
+├── projects/               ← Live project work (separate from the system)
 └── examples/               ← Worked example (bookmark-cli)
 ```
 
@@ -130,6 +137,7 @@ ai-build-os/
 | `templates/` | When you need to create an artifact for a stage |
 | `memory/` | When you need to check past decisions, patterns, or project status |
 | `project-starter/` | When you're starting a new project |
+| `projects/` | Where your live project work goes |
 | `examples/` | When you want to see how the system works in practice |
 
 ---
@@ -154,6 +162,7 @@ This system is designed to improve over time:
 - **Add new patterns** to `memory/patterns.md` when you discover reusable solutions
 - **Refine stage definitions** as you learn what works in practice
 - **Add new examples** as you complete projects
+- **Log changes** in [`CHANGELOG.md`](CHANGELOG.md) so the evolution is visible
 
 The system should grow through use, not through upfront design.
 
