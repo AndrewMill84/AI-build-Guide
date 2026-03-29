@@ -15,7 +15,7 @@ Project memory is a lightweight knowledge base that persists across sessions, pr
 | File | Purpose | Update Frequency |
 |---|---|---|
 | [decisions.md](decisions.md) | Log of all significant decisions across projects | When a decision is made (any stage) |
-| [patterns.md](patterns.md) | Reusable patterns and lessons learned | When a pattern is discovered (usually Stage 8) |
+| [patterns.md](patterns.md) | Reusable patterns, failure patterns, and lessons learned | When a pattern is discovered (usually Stage 8) |
 | [project-index.md](project-index.md) | Master index of all projects with status | When a project starts or completes |
 
 ---
@@ -29,12 +29,13 @@ Project memory is a lightweight knowledge base that persists across sessions, pr
 
 ### During a Project
 1. **Add decisions** to `decisions.md` using `templates/decision-log-entry.md`
-2. **Add patterns** to `patterns.md` using `templates/patterns-and-lessons.md`
+2. **Add good patterns** to `patterns.md` using `templates/patterns-and-lessons.md`
+3. **Add failure patterns** to `patterns.md` when something goes wrong — use the failure pattern format in the same template
 
 ### After Completing a Project
 1. **Update `project-index.md`** with the project summary and status
 2. **Ensure all decisions** from the project are in `decisions.md`
-3. **Add any new patterns** to `patterns.md`
+3. **Add any new patterns** (good and bad) to `patterns.md`
 
 ---
 
@@ -47,8 +48,24 @@ When entering a project:
 
 When completing work:
 - **Record decisions** that others might need to know about
-- **Record patterns** that could be reused in future projects
+- **Record good patterns** that could be reused in future projects
+- **Record failure patterns** — mistakes, bad prompts, rework triggers, and anti-patterns so they are not repeated
 - **Update `project-index.md`** if the project's status has changed
+
+---
+
+## What Gets Recorded
+
+Memory captures **both positive and negative knowledge**:
+
+| Track | What to Record | Heading in `patterns.md` |
+|---|---|---|
+| ✅ **Good patterns** | Approaches, architectures, tool configurations, prompt strategies that worked well | `## Pattern: [name]` |
+| ❌ **Failure patterns** | Repeated mistakes, bad prompts, rework triggers, failure modes, anti-patterns | `## Failure: [name]` |
+
+Both use the template in `templates/patterns-and-lessons.md`. Failure patterns include root cause, impact, prevention steps, and warning signs.
+
+> Negative lessons are often more valuable than positive ones — they prevent the same mistake from happening twice.
 
 ---
 
@@ -58,3 +75,4 @@ When completing work:
 - **Searchable** — Use clear titles and consistent formatting
 - **Cross-referenced** — Link back to the project that produced each entry
 - **Lightweight** — Keep entries concise; full details live in project artifacts
+- **Dual-track** — Always capture both what worked and what didn't

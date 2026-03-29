@@ -55,6 +55,7 @@ The AI Build OS expects a **"Think → Act → Reflect"** workflow from all agen
 | **Validate your changes** | Run relevant tests, linting, and build checks after making changes |
 | **Test what you changed** | If you modified logic, verify the change works as expected |
 | **Don't skip validation** | Even for "simple" changes — validate before marking work complete |
+| **Check the definition of done** | Before declaring work complete, verify against [`workflow/definition-of-done.md`](workflow/definition-of-done.md) |
 
 ### Documentation & Memory
 
@@ -215,21 +216,15 @@ For full details, see [`workflow/00-overview.md`](../workflow/00-overview.md).
 
 ---
 
-## Project-Specific Environment (Customize Per Project)
+## Project-Specific Environment
 
-To ensure agents can act autonomously, every project using this OS must define its specific environment constraints here (or in a centrally referenced `CONTEXT.md`).
+When working on a specific project, check whether the project has defined its environment in a `CONTEXT.md` file or equivalent. If it has, follow those instructions for build, test, lint, and style conventions.
 
-### Build / Lint / Test Commands
-- **Setup/Install**: `[e.g., npm install | pip install -r requirements.txt]`
-- **Run Dev Server**: `[e.g., npm run dev | python main.py]`
-- **Run Tests**: `[e.g., npm test | pytest]`
-- **Lint/Format**: `[e.g., npm run lint]`
-
-### Architecture & Code Style Rules
-- **Formatting**: `[e.g., Prettier with 2 spaces | PEP-8]`
-- **Code Standards**: `[e.g., Strict TypeScript required, Type hints required]`
-- **Documentation**: `[e.g., JSDoc for all public functions | Google-style docstrings]`
-- **Architecture Pattern**: `[e.g., Component-based architecture, RESTful endpoints]`
+If no project-level environment file exists, ask the human before assuming:
+- How to install dependencies
+- How to run the dev server
+- How to run tests
+- What formatting and code style conventions apply
 
 ---
 

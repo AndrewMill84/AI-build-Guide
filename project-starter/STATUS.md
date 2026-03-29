@@ -13,8 +13,8 @@
 | **Project** | <!-- Project name --> |
 | **Current Stage** | `1 — Idea Capture` |
 | **Stage Status** | `not-started` |
-| **Objective** | <!-- What this stage is trying to achieve --> |
-| **Current Action Required** | Human captures the initial idea in 01-idea.md |
+| **Objective** | Capture the core idea, motivation, and constraints |
+| **Current Action Required** | Human writes the initial idea in `01-idea.md` |
 | **Who Acts Next** | `human` |
 | **Artifact Due Next** | `01-idea.md` |
 | **Required Input From Human** | The core idea, motivation, success criteria, constraints, and scope boundaries |
@@ -32,20 +32,20 @@
 
 - [ ] `01-idea.md` — Idea capture
 - [ ] `02-clarification.md` — Clarification Q&A
-- [ ] `03-spec.md` — Product / feature specification ⛳ **approval gate**
-- [ ] `04-plan.md` — Technical implementation plan ⛳ **approval gate**
+- [ ] `03-spec.md` — Specification ⛳ **approval gate**
+- [ ] `04-plan.md` — Technical plan ⛳ **approval gate**
 - [ ] `05-tasks.md` — Task breakdown
 - [ ] `06-implementation-log.md` — Implementation log
 - [ ] `07-review.md` — Review checklist
 - [ ] `08-report.md` — Post-task report
 - [ ] `09-handoff.md` — Session handoff
-- [ ] `decisions.md` — Decision log (if applicable)
+- [ ] `decisions.md` — Decision log (maintained throughout)
 
 ---
 
 ## Stage History
 
-<!-- Track stage transitions for audit trail -->
+<!-- Add a row each time the project moves to a new stage. This creates an audit trail. -->
 
 | Date | Stage | Who | Notes |
 |---|---|---|---|
@@ -55,6 +55,6 @@
 
 ## Notes
 
-<!-- Any additional context about the project state -->
+<!-- Free-form notes about the project. Use this for context that doesn't fit elsewhere. -->
 
-
+---

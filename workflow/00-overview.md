@@ -129,3 +129,14 @@ Every project has a `STATUS.md` file that tracks:
 - **Completed artifacts** — checklist of what exists
 
 See [`project-starter/STATUS.md`](../project-starter/STATUS.md) for the template.
+
+---
+
+## Related Files
+
+| File | What It Covers |
+|---|---|
+| [Definition of Done](definition-of-done.md) | Concrete completion criteria for stages, tasks, features, and handoffs |
+| [Roles & Responsibilities](roles-and-responsibilities.md) | Who does what at each stage — human vs. agent |
+| [AGENTS.md](../AGENTS.md) | Agent operating contract — how AI agents should behave |
+| [QUICKREF.md](../QUICKREF.md) | Operator quick reference — stage-by-stage guide for humans |
