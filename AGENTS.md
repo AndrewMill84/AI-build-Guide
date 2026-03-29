@@ -13,10 +13,22 @@ If you are an AI agent, read this file before doing any work.
 3. **Check `memory/decisions.md`** for any decisions that affect your work
 4. **Check `memory/patterns.md`** for existing patterns before creating new approaches
 5. **Review existing project artifacts** (spec, plan, tasks) to understand full context
+6. **Consult authoritative specs** when a request introduces new capabilities, breaking changes, architecture shifts, or seems ambiguous
 
 ---
 
 ## Core Behavior Rules
+
+The AI Build OS expects a **"Think → Act → Reflect"** workflow from all agents.
+
+### Artifact-First Workflow
+
+| Rule | Detail |
+|---|---|
+| **Artifact-Driven Work** | For non-trivial tasks, always create or update a dedicated plan or task file artifact |
+| **Visual Artifacts** | If the UI/UX is modified, capture screenshots or visual demonstrations when possible |
+| **Lightweight Outputs** | Keep generated artifacts focused, deterministic, and free of unnecessary fluff |
+| **Log Storage** | Store complex test or execution logs in dedicated output files rather than dumping them in chat |
 
 ### Planning & Communication
 
@@ -200,6 +212,24 @@ Going back is normal. Building on a weak foundation is not. Follow these rules:
 > ⚠️ **Never patch around a problem at a later stage.** If the spec is wrong, don't hack around it in code — fix the spec, update the plan, then implement correctly.
 
 For full details, see [`workflow/00-overview.md`](../workflow/00-overview.md).
+
+---
+
+## Project-Specific Environment (Customize Per Project)
+
+To ensure agents can act autonomously, every project using this OS must define its specific environment constraints here (or in a centrally referenced `CONTEXT.md`).
+
+### Build / Lint / Test Commands
+- **Setup/Install**: `[e.g., npm install | pip install -r requirements.txt]`
+- **Run Dev Server**: `[e.g., npm run dev | python main.py]`
+- **Run Tests**: `[e.g., npm test | pytest]`
+- **Lint/Format**: `[e.g., npm run lint]`
+
+### Architecture & Code Style Rules
+- **Formatting**: `[e.g., Prettier with 2 spaces | PEP-8]`
+- **Code Standards**: `[e.g., Strict TypeScript required, Type hints required]`
+- **Documentation**: `[e.g., JSDoc for all public functions | Google-style docstrings]`
+- **Architecture Pattern**: `[e.g., Component-based architecture, RESTful endpoints]`
 
 ---
 
