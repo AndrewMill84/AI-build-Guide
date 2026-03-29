@@ -106,7 +106,14 @@ Each stage's definition tells you:
 - What artifact to create
 - When you're done and what's next
 
-### 5. Update STATUS.md as you go
+### 5. Wire the Agent
+
+To make sure your AI agent follows the process automatically:
+- In Cursor or Antigravity, the global `.cursorrules` in this repo is already active.
+- Use the `/session-start` workflow to begin building.
+- (See the **Wiring** section below for details on standalone setups.)
+
+### 6. Update STATUS.md as you go
 
 Keep your `STATUS.md` current — it's how you (and any AI agent) know what to do next.
 
@@ -151,6 +158,56 @@ If you are an AI coding agent working in a project that uses the AI Build OS:
 3. **Follow the workflow stage** you're in — each stage file tells you what's expected
 4. **Use the templates** — they ensure consistent, predictable output
 5. **Update memory** — log decisions and record patterns when you learn something reusable
+
+---
+
+## Wiring the AI Build OS into Your Agent Tooling
+
+The AI Build OS is a process defined in files. For it to work automatically — without you reminding the agent every session — you need to wire it into your agent environment.
+
+There are two mechanisms:
+
+### Rules (always-on behavior)
+
+Rules are instructions the agent reads at the start of every interaction. They act as a persistent operating contract so the agent follows the process without being prompted.
+
+- **Antigravity**: Add rules in your user-level settings or drop a repo-level rules file into the project
+- **Cursor**: Add a `.cursorrules` file to the project repo root
+
+At minimum, your rules for any project using the AI Build OS should tell the agent:
+
+```
+This project uses the AI Build OS workflow system.
+- Always read STATUS.md before doing any work
+- Follow the rules in AGENTS.md
+- Use templates from ai-build-os/templates/ for all artifacts
+- Update STATUS.md after completing any stage or significant action
+- Check memory/decisions.md and memory/patterns.md before making design decisions
+```
+
+### Workflows (on-demand procedures)
+
+Workflows are named, repeatable procedures you invoke when needed. They live in `.agents/workflows/` as markdown files and can be triggered by name (e.g. `/session-start`).
+
+Recommended starter workflows for the AI Build OS:
+
+| Workflow | Trigger | What It Does |
+|---|---|---|
+| Session Start | `/session-start` | Reads STATUS.md, summarizes current state, tells you exactly what's needed next |
+| Session End | `/session-end` | Creates handoff notes, updates STATUS.md, prepares for the next session |
+| New Project | `/new-project` | Creates the project folder, copies STATUS.md and the first template |
+| Next Step | `/next-step` | Reads STATUS.md and states the single next action clearly |
+| Advance Stage | `/advance-stage` | Marks the current stage complete and transitions STATUS.md to the next one |
+
+### Recommended setup for a new project
+
+1. Create the project repo
+2. Add rules pointing the agent to `AGENTS.md` and `STATUS.md`
+3. Add `.agents/workflows/session-start.md` and `session-end.md` as a minimum
+4. Start at Stage 1 using the [new project checklist](project-starter/new-project-checklist.md)
+5. Run `/session-start` at the beginning of every working session
+
+Workflows will be added to this system over time as they are tested and refined.
 
 ---
 

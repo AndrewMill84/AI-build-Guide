@@ -45,7 +45,7 @@ A quick-start checklist for creating a new project with the AI Build OS. For det
 
 ## Ready to Go
 
-- [ ] **Point the agent to the system** — share `AGENTS.md` and `STATUS.md` so the agent knows how to operate
+- [ ] **Point the agent to the system** — run the `/session-start` workflow using your AI agent (Cursor/Antigravity). This automatically reads `STATUS.md` and orients the agent.
 - [ ] **Let the agent drive** — starting from Stage 2, the agent asks clarifying questions and produces artifacts
 - [ ] **Your job is to review, answer questions, and approve at gates** (Stage 3: Spec ⛳, Stage 4: Plan ⛳)
 
