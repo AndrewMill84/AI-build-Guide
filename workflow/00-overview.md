@@ -97,6 +97,8 @@ Never patch around a problem at a later stage. If the spec is wrong, don't hack 
 | 8 | [Documentation](08-documentation.md) | Record outcomes | `post-task-report.md` | `08-report.md` |
 | 9 | [Handoff](09-handoff.md) | Prepare for what's next | `session-handoff.md` | `09-handoff.md` |
 
+> **For small, well-understood, low-risk tasks** — use [Fast Track](fast-track.md) instead (4 stages, minimal paperwork).
+
 ---
 
 ## Who Does What
@@ -137,6 +139,7 @@ See [`project-starter/STATUS.md`](../project-starter/STATUS.md) for the template
 | File | What It Covers |
 |---|---|
 | [Definition of Done](definition-of-done.md) | Concrete completion criteria for stages, tasks, features, and handoffs |
+| [Fast Track](fast-track.md) | Lightweight 4-stage flow for small, well-understood tasks |
 | [Roles & Responsibilities](roles-and-responsibilities.md) | Who does what at each stage — human vs. agent |
 | [AGENTS.md](../AGENTS.md) | Agent operating contract — how AI agents should behave |
 | [QUICKREF.md](../QUICKREF.md) | Operator quick reference — stage-by-stage guide for humans |

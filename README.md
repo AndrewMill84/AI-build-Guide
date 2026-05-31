@@ -76,7 +76,7 @@ flowchart LR
 | **8. Documentation** | Record what was built and learned | `08-report.md` |
 | **9. Handoff** | Prepare for next session or next person | `09-handoff.md` |
 
-Full stage definitions: [`workflow/`](workflow/00-overview.md)
+Full stage definitions: [`workflow/`](workflow/00-overview.md) | Fast track for small tasks: [`workflow/fast-track.md`](workflow/fast-track.md)
 
 ---
 
@@ -171,7 +171,7 @@ There are two mechanisms:
 
 Rules are instructions the agent reads at the start of every interaction. They act as a persistent operating contract so the agent follows the process without being prompted.
 
-- **Antigravity**: Add rules in your user-level settings or drop a repo-level rules file into the project
+- **Antigravity**: Add workspace rule markdown files in `.agents/rules/` (e.g., `.agents/rules/ai-build-os.md`), or global rules in `~/.gemini/GEMINI.md`
 - **Cursor**: Add a `.cursorrules` file to the project repo root
 
 At minimum, your rules for any project using the AI Build OS should tell the agent:
@@ -198,6 +198,7 @@ Recommended starter workflows for the AI Build OS:
 | New Project | `/new-project` | Creates the project folder, copies STATUS.md and the first template |
 | Next Step | `/next-step` | Reads STATUS.md and states the single next action clearly |
 | Advance Stage | `/advance-stage` | Marks the current stage complete and transitions STATUS.md to the next one |
+| **Fast Track** | `/fast-track` | Guides you through the 4-stage fast track flow for small tasks |
 
 ### Recommended setup for a new project
 

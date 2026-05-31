@@ -30,6 +30,27 @@ The AI uses the output of that stage to complete the next part of the work.
 
 ---
 
+## ⚡ Fast Track Mode
+
+For **small, well-understood, low-risk tasks** that don't need the full 9-stage process, use Fast Track instead.
+
+**Use Fast Track when all of these are true:**
+- The task is small — completable in a single session
+- Requirements are already clear — no significant ambiguity
+- It's low risk — a mistake is easily reversed
+- You are adding to or improving something, not building from scratch
+
+**Fast Track has 4 stages:**
+```
+FT1 — Brief  →  FT2 — Spec  →  FT3 — Build  →  FT4 — Check
+```
+
+> 📄 Full Fast Track guide: [`workflow/fast-track.md`](workflow/fast-track.md)
+
+**If in doubt, use the full 9-stage process.**
+
+---
+
 ## 🚀 Before Starting Any Project
 
 1. **Create a project folder** (e.g., `projects/my-project/`)
@@ -434,6 +455,7 @@ Nothing should be coded until both gates are passed.
 2. **Always update STATUS.md when moving between stages.**
 3. **One task at a time during build.**
 4. **Check memory before making new decisions.**
+5. **Use Fast Track for small, well-understood, low-risk tasks — full track for everything else.**
 
 Good results come from:
 

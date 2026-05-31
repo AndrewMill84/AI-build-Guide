@@ -4,6 +4,46 @@ All notable changes to the AI Build OS are documented here. This tracks the evol
 
 Format: reverse chronological. Most recent changes first.
 
+## v1.3 — 2026-05-31 — Fast Track Mode
+
+Added a lightweight 4-stage alternative workflow for small, well-understood, low-risk tasks.
+
+### Added
+
+| Change | File | Rationale |
+|---|---|---|
+| Fast Track workflow | `workflow/fast-track.md` | Full 9-stage process was overkill for small tasks — operators needed a faster, lower-overhead path |
+
+### Changed
+
+| Change | File | Rationale |
+|---|---|---|
+| Added Fast Track reference + rule 5 | `QUICKREF.md` | Operators need to know Fast Track exists before starting any task |
+| Added Fast Track to related files + stage table callout | `workflow/00-overview.md` | Agents and operators consulting the overview should see the alternative path |
+| Added Fast Track to workflow table | `README.md` | Keeps the wiring section complete |
+
+---
+
+## v1.2 — 2026-05-31 — Agent Integration Pass
+
+Integrated the AI Build OS directly with agent environments (Cursor and Google Antigravity) using native rules and workflows.
+
+### Added
+
+| Change | File | Rationale |
+|---|---|---|
+| Cursor Rules | `.cursorrules` | Automated enforcement of AI Build OS contract in Cursor |
+| Session Start Workflow | `.agents/workflows/session-start.md` | Named agent workflow to orient agents at the start of a session |
+| Session End Workflow | `.agents/workflows/session-end.md` | Named agent workflow to handle session handoffs and status updates |
+| Antigravity Workspace Rules | `.agents/rules/ai-build-os.md` | Persistent rules integration specifically for Google Antigravity |
+
+### Changed
+
+| Change | File | Rationale |
+|---|---|---|
+| Documented wiring instructions | `README.md` | Explained how to use `.cursorrules` and `.agents/rules/` for agent environments |
+| Checklist wiring | `project-starter/new-project-checklist.md` | Updated the new project setup steps to include triggering the `/session-start` workflow |
+
 ---
 
 ## v1.1 — 2026-03-29 — Improvement Pass
